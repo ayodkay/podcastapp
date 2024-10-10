@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">podcastapp</string>
+    <string name="offline_mode">you are offline</string>
+    <string name="offline_message">you are currently offline</string>
+    <string name="offline_mode_message">see downloaded playlist?</string>
+    <string name="go_to_downloads">Yes</string>
+    <string name="dismiss">No</string>
+    <string name="enter_podcast_url">Enter Rss url</string>
+    <string name="search">Search</string>
+    <string name="episodes">Episodes</string>
+    <string name="no_downloads">No Available Podcadst</string>
+    <string name="downloads">Downloads</string>
+    <string name="favorites">Favorites</string>
+    <string name="podcasts">Podcast</string>
+    <string name="no_favorites">NO Favorite</string>
+</resources>

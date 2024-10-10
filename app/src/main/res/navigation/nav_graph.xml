@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/podcastListFragment">
+
+    <fragment
+        android:id="@+id/podcastListFragment"
+        android:name="com.example.podcastapp.presentation.podcast_list.PodcastListFragment"
+        android:label="Podcasts"
+        tools:layout="@layout/fragment_podcast_list">
+        <action
+            android:id="@+id/action_podcastListFragment_to_podcastDetailFragment"
+            app:destination="@id/podcastDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/podcastDetailFragment"
+        android:name="com.example.podcastapp.presentation.podcastdetail.PodcastDetailFragment"
+        android:label="Podcast Details"
+        tools:layout="@layout/fragment_podcast_detail">
+        <argument
+            android:name="podcastUrl"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_podcastDetailFragment_to_playerFragment"
+            app:destination="@id/playerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/playerFragment"
+        android:name="com.example.podcastapp.presentation.player.PlayerFragment"
+        android:label="Player"
+        tools:layout="@layout/fragment_player">
+        <argument
+            android:name="episodeGuid"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/downloadsFragment"
+        android:name="com.example.podcastapp.presentation.downloads.DownloadsFragment"
+        android:label="Downloads"
+        tools:layout="@layout/fragment_downloads">
+        <action
+            android:id="@+id/action_downloadsFragment_to_playerFragment"
+            app:destination="@id/playerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.example.podcastapp.presentation.favorites.FavoritesFragment"
+        android:label="Favorites"
+        tools:layout="@layout/fragment_favorites">
+        <action
+            android:id="@+id/action_favoritesFragment_to_playerFragment"
+            app:destination="@id/playerFragment" />
+    </fragment>
+
+</navigation>
